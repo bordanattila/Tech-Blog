@@ -1,6 +1,4 @@
-const { BlogPosts } = require('../models');
-
-const blogdata = [
+ [
     
     {
         "topic": "HTML",
@@ -12,8 +10,4 @@ const blogdata = [
         "username": "test2",
         "content": "this is also awesome"
     }
-];
-
-const seedBlog = () => BlogPosts.bulkCreate(blogdata);
-
-module.exports = seedBlog;
+]

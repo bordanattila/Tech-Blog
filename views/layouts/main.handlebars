@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Attila's Tech Blog</title>
@@ -12,16 +15,19 @@
         💻 Attila's Tech Blog 💽
       </h1>
     </header>
-     <nav>
-    <a href="/">Home</a>
-    <a href="/">Dashboard</a>
-    <a href="/login">Login</a>
-    <button id="logout" class="btn-no-style">Logout</button>
-  </nav>
-      <main class="container container-fluid mt-5">
-        {{{ body }}}
-      </main>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/">Dashboard</a>
+      {{#if loggedIn}}
+      <button id="logout" class="btn-no-style">Logout</button>
+      {{else}}
+      <a href="/login">Login</a>
+      {{/if}}
+    </nav>
+    <main class="container container-fluid mt-5">
+      {{{ body }}}
+    </main>
   </div>
-  </body>
+</body>
 
 </html>

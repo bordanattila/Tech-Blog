@@ -1,0 +1,12 @@
+ [    
+    {        
+        "topic": "HTML",
+        "content": "this is awesome",
+        "user_id": 1
+    },
+    {        
+        "topic": "CSS",
+        "content": "this is cool",
+        "user_id": 2
+    }
+]

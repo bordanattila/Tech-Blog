@@ -1,8 +1,15 @@
+
+
 <h2>Your Dasboard</h2>
 
-<p>Posted by: {{username}}</p>
+
 {{#each blogs}}
 <p>Topic: {{ this.topic}}</p>
 <p>Blog Post: {{this.content}}</p>
 
 {{/each}}
+
+<a href="/newblogpost">
+
+<button>New blog post</button>
+</a>

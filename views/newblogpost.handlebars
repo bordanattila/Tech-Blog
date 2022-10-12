@@ -1,2 +1,18 @@
-
 <p>working</p>
+
+<form>
+    <label class="textArea-label" for="newblogPost">
+        New blog Post
+    </label>
+    <br>
+    <p>Blog topic</p>
+    <textarea class="blogTopic-textarea" name="newBlogTopic" rows="2" cols="30">{{newBlogTopic}}</textarea>
+    <br>
+    <p>Blog content</p>
+    <textarea class="blogPost-textarea" name="newBlogPost" rows="5" cols="30">{{newBlogPost}}</textarea>
+</form>
+
+
+<button class="save-blogPost">Save new post</button>
+
+<script src="/js/newpost.js"></script>

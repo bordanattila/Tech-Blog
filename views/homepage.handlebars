@@ -1,3 +1,21 @@
-{{#each existingBlog as |blogs|}}
-{{> homepage-details}}
+<p>{{blogData.topic}} by <strong>{{blogUserName}}</strong> on {{format_date blogData.createdAt}}</p>
+<p>{{blogData.content}}</p>
+
+{{#each comments}}
+<h3>**{{this.user.username}}**</h3>
+<p>{{this.user_id}}</p>
+<p>{{this.comment_content}}</p>
+<p>{{format_date this.createdAt}}</p>
 {{/each}}
+<form>
+    <label class="textArea-label" for="commentText">
+        Your comment
+    </label>
+    <br>
+<textarea class="comment-textarea" name"commentText" rows="5" cols="30">{{commentText}}</textarea>
+</form>
+
+<button class="add-comment">Add comment</button>
+<button class="save-comment">Save comment</button>
+
+<script src="/js/comment.js"></script>

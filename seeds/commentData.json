@@ -1,0 +1,27 @@
+[    
+    {        
+        "comment_content": "comment 1",
+        "blog_id": 1,
+        "user_id": 3
+    },
+    {        
+        "comment_content": "comment 2",
+        "blog_id": 2,
+        "user_id": 2
+    },
+    {        
+        "comment_content": "comment 3",
+        "blog_id": 2,
+        "user_id": 2
+    },
+    {        
+        "comment_content": "comment 4",
+        "blog_id": 1,
+        "user_id": 1
+    },
+    {        
+        "comment_content": "comment 5",
+        "blog_id": 1,
+        "user_id": 1
+    }
+]

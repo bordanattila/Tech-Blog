@@ -1,9 +1,8 @@
 <h2>Your Dasboard</h2>
-{{!-- {{#each userBlogs as |blogs|}}
-{{> dashboard-details}}
-{{/each}} --}}
 
-<div>
-<p>content</p>
-<p>{{user.content}}</p>
-</div>
+<p>Posted by: {{username}}</p>
+{{#each blogs}}
+<p>Topic: {{ this.topic}}</p>
+<p>Blog Post: {{this.content}}</p>
+
+{{/each}}

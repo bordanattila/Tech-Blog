@@ -8,5 +8,20 @@
         "topic": "CSS",
         "content": "this is cool",
         "user_id": 2
+    },
+    {        
+        "topic": "CJS",
+        "content": "this is more cool",
+        "user_id": 2
+    },
+    {        
+        "topic": "Python",
+        "content": "this is the best",
+        "user_id": 1
+    },
+    {        
+        "topic": "CSS",
+        "content": "it is fun",
+        "user_id": 1
     }
 ]

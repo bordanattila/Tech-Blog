@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { User } = require("../../models");
-const BlogPosts = require('../../models/blogPost');
+const { User, BlogPosts, Comment } = require("../../models");
+
 
 // Create new user
 router.post("/signup", async (req, res) => {
@@ -55,42 +55,23 @@ router.post("/signup", async (req, res) => {
       console.log(err);
       res.status(500).json(err);
     }
-  });
+  });  
 
-  // Dashoard
-  router.get("/dashboard ", async (req,res) => {
-    const userData = await User.findByPk({
-      where: {
-        id: 1,
-      },
-      include: [
-        {
-          model: BlogPosts,
-          attributes: [
-            "id",
-            "topic",
-            "content",
-            "user_id",
-          ],
-        },
-      ],
-    }).catch((err) => {
-      res.json(err);
-  });
-
-  //   const pageData = await BlogPosts.findAll(
-  //     { 
-  //     where: {
-  //       user_id: 1,
-  //     } }
-  // ).catch((err) => {
-  //     res.json(err);
-  // });
-
-    res.render("dashboard", {      
-      user: userData,
-      userBlogs: pageData
-    })
+  // Save comment on existingpost
+  router.post("/savecomment", async (req, res) => {
+    
+    try {
+      const commentData = await Comment.create({
+        comment_content: req.body.commentText,
+        user_id: req.session.userID,
+        blog_id: req.session.blog_id,
+        
+      });
+      res.status(200).json(commentData)
+    } catch (err) {
+      res.status(400).json(err)
+      console.log(err)
+    }
   });
   
   // Logout

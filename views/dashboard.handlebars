@@ -4,13 +4,21 @@
 
 
     {{#each blogs}}
+    {{#if id === "undefined"}}
+        <div class="posts container h-100 w-100 justify-content-center">
+        
+        <a href="/dashboard/">
+            <p>Topic: no topics yet Blog Post: no post yet</p>
+        </a>
+    </div>
+    {{else}}
     <div class="posts container h-100 w-100 justify-content-center">
-
+        
         <a href="/dashboard/{{id}}">
             <p>Topic: {{this.topic}} Blog Post: {{this.content}}</p>
         </a>
     </div>
-
+    {{/if}}
     {{/each}}
 
     <a href="/newblogpost">

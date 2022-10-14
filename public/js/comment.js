@@ -12,7 +12,7 @@ const hide = (elem) => {
   elem.style.visibility = "hidden";
 };
 
-async function saveComment (e) {
+async function saveComment(e) {
   e.preventDefault();
   const commentText = document.querySelector(".comment-textarea").value;
   const response = await fetch("/api/users/savecomment", {
@@ -32,13 +32,13 @@ async function saveComment (e) {
 };
 
 const addComment = (e) => {
-    e.preventDefault();
-    show(label)
-    show(textArea)
-    show(saveCommentBtn)
-    saveCommentBtn.addEventListener("click", saveComment);
+  e.preventDefault();
+  show(label)
+  show(textArea)
+  show(saveCommentBtn)
 };
 
+saveCommentBtn.addEventListener("click", saveComment);
 addCommentBtn.addEventListener("click", addComment);
 
 hide(saveCommentBtn);

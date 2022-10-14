@@ -112,6 +112,22 @@ router.get("/homepage/:id", withAuth, async (req,res) => {
         console.log(err);
         res.status(500).json(err)
     }
+});
+
+router.get("/dashboard/:id", withAuth, async (req, res) => {
+    try {
+        const blogData = await BlogPosts.findByPk(req.params.id, {
+            raw: true,
+
+        });
+        res.render("editblogpost", {
+            blogData,
+            loggedIn: req.session.loggedIn,
+        })
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err)
+    }
 })
 
 router.get("/newblogpost", withAuth, async (req, res) => {

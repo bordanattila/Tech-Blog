@@ -4,8 +4,9 @@
 
 
 {{#each blogs}}
-<p>Topic: {{ this.topic}}</p>
-<p>Blog Post: {{this.content}}</p>
+<a href="/dashboard/{{id}}">
+<p>Topic: {{ this.topic}}  Blog Post: {{this.content}}</p>
+</a>
 
 {{/each}}
 

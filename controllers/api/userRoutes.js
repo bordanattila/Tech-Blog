@@ -87,7 +87,43 @@ router.post("/saveblogpost", async (req, res) => {
     res.status(400).json(err)
     console.log(err)
   }
+});
+
+// Update blogpost
+router.put("/dashboard/:id", async (req, res) => {
+  try {
+    const blogData = await BlogPosts.update(
+      {
+        topic: req.body.postTopic,
+        content: req.body.postContent,
+      },
+      {
+        where: {
+          id: req.params.id,
+        }
+      }
+    );
+    res.status(200).json(blogData);
+  } catch (err) {
+    res.status(400).json(err)
+    console.log(err)
+  }
 })
+
+// Delete Blog Post
+router.delete("/dashboard/:id", async (req, res) => {
+  try {
+    const deletePost = await BlogPosts.destroy({
+      where: {
+        id: req.params.id,
+      }
+    });
+    res.status(200).json(deletePost);
+  } catch (err) {
+    res.status(400).json(err)
+    console.log(err)
+  }
+});
 
 // Logout
 router.post("/logout", (req, res) => {

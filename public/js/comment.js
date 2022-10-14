@@ -14,8 +14,11 @@ const hide = (elem) => {
 
 async function saveComment(e) {
   e.preventDefault();
+  const id = window.location.toString().split("/")[
+    window.location.toString().split("/").length - 1
+];
   const commentText = document.querySelector(".comment-textarea").value;
-  const response = await fetch("/api/users/savecomment", {
+  const response = await fetch(`/api/users/savecomment/${id}`, {
     method: "POST",
     body: JSON.stringify({
       commentText,
@@ -36,6 +39,7 @@ const addComment = (e) => {
   show(label)
   show(textArea)
   show(saveCommentBtn)
+  hide(addCommentBtn)
 };
 
 saveCommentBtn.addEventListener("click", saveComment);

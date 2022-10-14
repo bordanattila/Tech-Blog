@@ -1,11 +1,13 @@
+<div class="container h-100 w-100 justify-content-center">
+
 <p>{{blogData.topic}} by <strong>{{blogUserName}}</strong> on {{format_date blogData.createdAt}}</p>
 <p>{{blogData.content}}</p>
 
 {{#each comments}}
-<h3>**{{this.user.username}}**</h3>
-<p>{{this.user_id}}</p>
+<div class=" posts container h-100 w-100 justify-content-center">
+<span><strong>{{this.user.username}}</strong>  on {{format_date this.createdAt}}</span>
 <p>{{this.comment_content}}</p>
-<p>{{format_date this.createdAt}}</p>
+</div>
 {{/each}}
 <form>
     <label class="textArea-label" for="commentText">
@@ -17,5 +19,6 @@
 
 <button class="add-comment">Add comment</button>
 <button class="save-comment">Save comment</button>
+</div>
 
 <script src="/js/comment.js"></script>

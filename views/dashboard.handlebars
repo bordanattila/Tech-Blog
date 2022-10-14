@@ -1,16 +1,20 @@
+<div class="container h-100 w-100 justify-content-center">
+
+    <h2>Your Dasboard</h2>
 
 
-<h2>Your Dasboard</h2>
+    {{#each blogs}}
+    <div class="posts container h-100 w-100 justify-content-center">
 
+        <a href="/dashboard/{{id}}">
+            <p>Topic: {{this.topic}} Blog Post: {{this.content}}</p>
+        </a>
+    </div>
 
-{{#each blogs}}
-<a href="/dashboard/{{id}}">
-<p>Topic: {{ this.topic}}  Blog Post: {{this.content}}</p>
-</a>
+    {{/each}}
 
-{{/each}}
+    <a href="/newblogpost">
 
-<a href="/newblogpost">
-
-<button>New blog post</button>
-</a>
+        <button>New blog post</button>
+    </a>
+</div>

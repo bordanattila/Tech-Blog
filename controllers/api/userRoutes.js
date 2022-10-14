@@ -58,15 +58,16 @@ router.post("/login", async (req, res) => {
 });
 
 // Save comment on existingpost
-router.post("/savecomment", async (req, res) => {
+router.post("/savecomment/:id", async (req, res) => {
 
   try {
     const commentData = await Comment.create({
       comment_content: req.body.commentText,
       user_id: req.session.userID,
-      blog_id: req.session.blog_id,
+      blog_id: req.params.id,
 
     });
+    // console.log(blog_id)
     res.status(200).json(commentData)
   } catch (err) {
     res.status(400).json(err)

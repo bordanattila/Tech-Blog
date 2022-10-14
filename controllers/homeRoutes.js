@@ -47,6 +47,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
             id: user_id,
         }
     })
+    console.log(pageData)
     res.render("dashboard", {
         loggedIn: req.session.loggedIn,
         blogs: pageData,

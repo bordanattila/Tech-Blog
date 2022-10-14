@@ -15,7 +15,7 @@ run `npm i`
 ![alt text](./Assets/screenshot.png) 
 ![alt text](./Assets/screenshot2.png) 
 
-[Heroku Link](https://github.com/attila)
+[Heroku Link](https://attila-tech-blog.herokuapp.com/)
 ## Credits
 Glassmorphisom CSS is from https://css.glass
 Background image is from Canva.com

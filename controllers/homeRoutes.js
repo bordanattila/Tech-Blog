@@ -18,6 +18,10 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/login", async (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+      }
     res.render("login")
 });
 
@@ -34,6 +38,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
         }}
     ).catch((err) => {
         res.json(err);
+        console.log(err)
     });
     const userData = await User.findOne({
         raw: true,
@@ -134,7 +139,4 @@ router.get("/newblogpost", withAuth, async (req, res) => {
     res.render("newblogpost")
 });
 
-router.get("/logout", async (req, res) => {
-    res.render("/")
-});
 module.exports = router;

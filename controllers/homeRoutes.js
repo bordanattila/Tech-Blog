@@ -103,6 +103,7 @@ router.get("/homepage/:id", withAuth, async (req,res) => {
         req.session.save(() => {
             req.session.blog_id = blogData.id;
         })
+        console.log(comments)
         res.render("homepage", {
             blogUserName: blogData["user.username"],
             comments: comments,

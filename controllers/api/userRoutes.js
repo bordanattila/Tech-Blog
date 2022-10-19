@@ -22,6 +22,7 @@ router.post("/signup", async (req, res) => {
 });
 
 // Login existing user
+
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({

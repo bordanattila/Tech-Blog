@@ -19,3 +19,5 @@ run `npm i`
 ## Credits
 Glassmorphisom CSS is from https://css.glass
 Background image is from Canva.com
+
+change in readme

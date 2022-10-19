@@ -9,9 +9,10 @@ router.post("/signup", async (req, res) => {
       username: req.body.username,
       password: req.body.password,
     });
+    console.log("test: ", userData.id)
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.userId = id;
+      req.session.userId = userData.id;
       res.status(200).json(userData);
     });
     console.log(req.session)
@@ -49,7 +50,7 @@ router.post("/login", async (req, res) => {
 
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.userID = userData.id;
+      req.session.userId = userData.id;
       res
         .status(200)
         .json({ user: userData, message: "You are now logged in!" });

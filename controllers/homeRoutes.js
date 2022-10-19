@@ -49,7 +49,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     })
     console.log(pageData)
     res.render("dashboard", {
-        loggedIn: req.session.loggedIn,
+    
         blogs: pageData,
         username: userData.username,
     })
@@ -63,7 +63,7 @@ router.get("/homepagestart", withAuth, async (req, res) => {
     });
 
     res.render("homepagestart", {
-        loggedIn: req.session.loggedIn,
+  
         blogs: pageData,
     })
     
@@ -108,7 +108,7 @@ router.get("/homepage/:id", withAuth, async (req,res) => {
             blogUserName: blogData["user.username"],
             comments: comments,
             blogData, 
-            loggedIn: req.session.loggedIn,
+          
             
         });
     } catch (err) {

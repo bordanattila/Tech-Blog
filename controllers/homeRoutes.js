@@ -27,7 +27,7 @@ router.get("/signup", async (req, res) => {
 
 router.get("/dashboard", withAuth, async (req, res) => {
     console.log("hello")
-    const user_id = req.session.userID;
+    const user_id = req.session.userId;
     const pageData = await BlogPosts.findAll(
         { raw: true,
             where: {

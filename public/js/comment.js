@@ -4,19 +4,19 @@ const textArea = document.querySelector(".comment-textarea")
 const label = document.querySelector(".textArea-label");
 // Show an element
 const show = (elem) => {
-  elem.style.visibility = "visible";
+  elem.style.display = "block";
 };
 
 // Hide an element
 const hide = (elem) => {
-  elem.style.visibility = "hidden";
+  elem.style.display = "none";
 };
 
 async function saveComment(e) {
   e.preventDefault();
   const id = window.location.toString().split("/")[
     window.location.toString().split("/").length - 1
-];
+  ];
   const commentText = document.querySelector(".comment-textarea").value;
   const response = await fetch(`/api/users/savecomment/${id}`, {
     method: "POST",

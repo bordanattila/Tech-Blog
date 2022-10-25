@@ -5,16 +5,17 @@
 
     {{#each blogs}}
     <div class="posts container h-100 w-100 justify-content-center">
-        
-        <a href="/dashboard/{{id}}">
-            <p>Topic: {{this.topic}} Blog Post: {{this.content}}</p>
+
+        <a id="topic" href="/dashboard/{{id}}">
+            <span id="headline"><strong>Topic:</strong> {{this.topic}}</span><br>
         </a>
-    </div>
+        <span> {{this.content}}</span>
+    </div><br>
 
     {{/each}}
 
     <a href="/newblogpost">
 
-        <button>New blog post</button>
+        <button class="btn btn-primary">New blog post</button>
     </a>
 </div>

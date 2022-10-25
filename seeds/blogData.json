@@ -1,27 +1,22 @@
  [    
     {        
         "topic": "HTML",
-        "content": "this is awesome",
+        "content": "The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.",
         "user_id": 1
     },
     {        
         "topic": "CSS",
-        "content": "this is cool",
+        "content": "Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML.",
         "user_id": 2
     },
     {        
-        "topic": "CJS",
-        "content": "this is more cool",
+        "topic": "JS",
+        "content": "JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.",
         "user_id": 2
     },
     {        
         "topic": "Python",
-        "content": "this is the best",
-        "user_id": 1
-    },
-    {        
-        "topic": "CSS",
-        "content": "it is fun",
+        "content": "Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation.",
         "user_id": 1
     }
 ]

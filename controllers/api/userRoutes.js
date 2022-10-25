@@ -68,7 +68,7 @@ router.post("/savecomment/:id", async (req, res) => {
   try {
     const commentData = await Comment.create({
       comment_content: req.body.commentText,
-      user_id: req.session.userID,
+      user_id: req.session.userId,
       blog_id: req.params.id,
 
     });
@@ -86,7 +86,7 @@ router.post("/saveblogpost", async (req, res) => {
     const newPostData = await BlogPosts.create({
       topic: req.body.blogTopic,
       content: req.body.blogText,
-      user_id: req.session.userID,
+      user_id: req.session.userId,
     });
     res.status(200).json(newPostData)
   } catch (err) {

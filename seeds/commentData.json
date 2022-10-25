@@ -1,27 +1,27 @@
 [    
     {        
-        "comment_content": "comment 1",
+        "comment_content": "It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.",
         "blog_id": 1,
         "user_id": 3
     },
     {        
-        "comment_content": "comment 2",
-        "blog_id": 2,
-        "user_id": 2
-    },
-    {        
-        "comment_content": "comment 3",
-        "blog_id": 2,
-        "user_id": 2
-    },
-    {        
-        "comment_content": "comment 4",
+        "comment_content": "HTML is easy to learn. You will enjoy it!",
         "blog_id": 1,
+        "user_id": 2
+    },
+    {        
+        "comment_content": "JavaScript is the programming language of the Web.",
+        "blog_id": 3,
+        "user_id": 2
+    },
+    {        
+        "comment_content": "As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries",
+        "blog_id": 3,
         "user_id": 1
     },
     {        
-        "comment_content": "comment 5",
-        "blog_id": 1,
+        "comment_content": "Python is dynamically-typed and garbage-collected.",
+        "blog_id": 4,
         "user_id": 1
     }
 ]

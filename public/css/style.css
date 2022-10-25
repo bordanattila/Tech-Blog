@@ -15,7 +15,7 @@ body {
   background-position-x: center;
   background-position-y: top;
   background-repeat: no-repeat, no-repeat;
-  background-size: 100vw, cover;
+  background-size: cover;
   align-items: center;
   justify-content: center;
   color: white;
@@ -24,11 +24,14 @@ body {
 main {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   flex-grow: 1;
 }
 
 nav {
   margin-top: 20rem;
+  margin-left: 30px;
+  margin-right: 30px;
   display: flex;
   background-color: var(--navbar);
   /* From https://css.glass */
@@ -40,7 +43,7 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.42);
 }
 
-span {
+p {
   color: #0EC;
 }
 
@@ -52,8 +55,55 @@ a:hover {
   color: white;
 }
 
-p {
+h1 {
+  font-family: 'Libre Barcode 128 Text', cursive;
+  font-size: 4rem;
+}
+
+a,
+span {
   color: #0D1;
+}
+
+nav,
+a {
+  margin: 30px;
+}
+
+nav,
+.btn {
+  margin: 30px;
+}
+
+#headline {
+  color: #29f;
+}
+
+#topic {
+  position: relative;
+}
+
+#topic::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+#topic:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+
+#topic::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  z-index: -1;
+  transition: transform .3s ease;
 }
 
 .posts {
@@ -65,4 +115,42 @@ p {
   backdrop-filter: blur(4.1px);
   -webkit-backdrop-filter: blur(4.1px);
   border: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+.home {
+  margin-bottom: 1.25rem;
+}
+
+.btn {
+  text-decoration: none;
+  border: 3px solid #0D1;
+  position: relative;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: inherit;
+  transition: all .5s;
+}
+
+.btn::before {
+  top: -11px;
+  left: -11px;
+  border-width: 3px 0 0 3px;
+}
+
+.btn::after {
+  bottom: -11px;
+  right: -11px;
+  border-width: 0 3px 3px 0;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  width: calc(100% + 22px);
+  height: calc(100% + 22px);
 }

@@ -6,7 +6,7 @@ This is a live application where tech enthusiasts can chat about various topics.
 
 ## Installation
 
-run `npm i`
+run `npm install`
 
 ## Usage
 
@@ -20,4 +20,3 @@ run `npm i`
 Glassmorphisom CSS is from https://css.glass
 Background image is from Canva.com
 
-change in readme

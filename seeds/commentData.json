@@ -1,22 +1,22 @@
 [    
-    {        
+    {      
         "comment_content": "It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.",
-        "blog_id": 1,
+        "blog_id": 0,
         "user_id": 3
     },
     {        
         "comment_content": "HTML is easy to learn. You will enjoy it!",
-        "blog_id": 1,
+        "blog_id": 0,
         "user_id": 2
     },
     {        
         "comment_content": "JavaScript is the programming language of the Web.",
-        "blog_id": 3,
+        "blog_id": 2,
         "user_id": 2
     },
     {        
         "comment_content": "As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries",
-        "blog_id": 3,
+        "blog_id": 2,
         "user_id": 1
     },
     {        
